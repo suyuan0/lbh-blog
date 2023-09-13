@@ -1,6 +1,7 @@
 module.exports = {
 	plugins: {
 		autoprefixer: {},
+		tailwindcss: {},
 		'postcss-pxtorem': {
 			//根元素字体大小
 			rootValue: 16,
