@@ -6,7 +6,7 @@ const Loading: React.FC = () => {
 	useEffect(() => {
 		setTimeout(() => {
 			const loadingBox: HTMLElement = document.querySelector('.loading')!
-			loadingBox.classList.add('animate__backOutUp')
+			loadingBox.classList.add('animate__fadeOut')
 			if (isDelete) {
 				setTimeout(() => {
 					loadingBox.remove()

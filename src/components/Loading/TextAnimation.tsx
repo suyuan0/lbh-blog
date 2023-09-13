@@ -46,24 +46,6 @@ const TextAnimation = () => {
 
 	return (
 		<div className='text-animation-container absolute w-full bottom-1/4 text-center tracking-wide'>
-			<div className='combined-shape'>
-				<div className='shape-left'>
-					<TweenOne
-						animation={[
-							{ x: 158, type: 'from', ease: 'easeInOutQuint', duration: 600 },
-							{ x: -158, ease: 'easeInOutQuart', duration: 450, delay: -150 }
-						]}
-					/>
-				</div>
-				<div className='shape-right'>
-					<TweenOne
-						animation={[
-							{ x: -158, type: 'from', ease: 'easeInOutQuint', duration: 600 },
-							{ x: 158, ease: 'easeInOutQuart', duration: 450, delay: -150 }
-						]}
-					/>
-				</div>
-			</div>
 			<Texty
 				className='text-6xl'
 				type='mask-top'
@@ -93,7 +75,6 @@ const TextAnimation = () => {
 			>
 				「存在与时间」
 			</Texty>
-			<TweenOne className='combined-bar' animation={{ delay: 2000, width: 0, x: 158, type: 'from', ease: 'easeInOutExpo' }} />
 			<Texty className='mt-4' type='bottom' split={getSplit} delay={2200} interval={30}>
 				虽然人生在世有种种不如意，但你仍可以在幸福与不幸中做选择。
 			</Texty>
