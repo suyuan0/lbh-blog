@@ -1,53 +1,54 @@
 {
-    "name": "lbh-blog",
-    "private": true,
-    "version": "0.0.0",
-    "type": "commonjs",
-    "scripts": {
-        "dev": "vite",
-        "serve": "vite",
-        "build:dev": "vue-tsc && vite build --mode development",
-        "build:test": "vue-tsc && vite build --mode test",
-        "build:pro": "vue-tsc && vite build --mode production",
-        "type:check": "vue-tsc --noEmit --skipLibCheck",
-        "preview": "npm run build:dev && vite preview",
-        "lint:eslint": "eslint --fix --ext .js,.ts,.vue ./src",
-        "lint:prettier": "prettier --write \"src/**/*.{js,ts,json,tsx,css,less,scss,vue,html,md}\"",
-        "lint:stylelint": "stylelint --cache --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
-        "lint:lint-staged": "lint-staged",
-        "prepare": "husky install",
-        "release": "standard-version",
-        "commit": "git add -A && czg && git push"
-    },
-    "dependencies": {
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0"
-    },
-    "devDependencies": {
-        "@commitlint/cli": "^17.7.1",
-        "@commitlint/config-conventional": "^17.7.0",
-        "@types/react": "^18.2.15",
-        "@types/react-dom": "^18.2.7",
-        "@typescript-eslint/eslint-plugin": "^6.0.0",
-        "@typescript-eslint/parser": "^6.0.0",
-        "@vitejs/plugin-react": "^4.0.3",
-        "cz-git": "^1.7.1",
-        "czg": "^1.7.1",
-        "eslint": "^8.45.0",
-        "eslint-config-prettier": "^9.0.0",
-        "eslint-plugin-prettier": "^5.0.0",
-        "eslint-plugin-react-hooks": "^4.6.0",
-        "eslint-plugin-react-refresh": "^0.4.3",
-        "eslint-plugin-vue": "^9.17.0",
-        "husky": "^8.0.3",
-        "lint-staged": "^14.0.1",
-        "prettier": "^3.0.3",
-        "typescript": "^5.0.2",
-        "vite": "^4.4.5"
-    },
-    "config": {
-        "commitizen": {
-            "path": "node_modules/cz-git"
-        }
-    }
+	"name": "lbh-blog",
+	"private": true,
+	"version": "0.0.0",
+	"type": "commonjs",
+	"scripts": {
+		"dev": "vite",
+		"serve": "vite",
+		"build:dev": "vue-tsc && vite build --mode development",
+		"build:test": "vue-tsc && vite build --mode test",
+		"build:pro": "vue-tsc && vite build --mode production",
+		"type:check": "vue-tsc --noEmit --skipLibCheck",
+		"preview": "npm run build:dev && vite preview",
+		"lint:eslint": "eslint --fix --ext .js,.ts,.vue ./src",
+		"lint:prettier": "prettier --write \"src/**/*.{js,ts,json,tsx,css,less,scss,vue,html,md}\"",
+		"lint:stylelint": "stylelint --cache --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
+		"lint:lint-staged": "lint-staged",
+		"prepare": "husky install",
+		"release": "standard-version",
+		"commit": "git add -A && czg && git push"
+	},
+	"dependencies": {
+		"eslint-plugin-react": "^7.33.2",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^17.7.1",
+		"@commitlint/config-conventional": "^17.7.0",
+		"@types/react": "^18.2.15",
+		"@types/react-dom": "^18.2.7",
+		"@typescript-eslint/eslint-plugin": "^6.0.0",
+		"@typescript-eslint/parser": "^6.0.0",
+		"@vitejs/plugin-react": "^4.0.3",
+		"cz-git": "^1.7.1",
+		"czg": "^1.7.1",
+		"eslint": "^8.45.0",
+		"eslint-config-prettier": "^9.0.0",
+		"eslint-plugin-prettier": "^5.0.0",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"eslint-plugin-react-refresh": "^0.4.3",
+		"eslint-plugin-vue": "^9.17.0",
+		"husky": "^8.0.3",
+		"lint-staged": "^14.0.1",
+		"prettier": "^3.0.3",
+		"typescript": "^5.0.2",
+		"vite": "^4.4.5"
+	},
+	"config": {
+		"commitizen": {
+			"path": "node_modules/cz-git"
+		}
+	}
 }
