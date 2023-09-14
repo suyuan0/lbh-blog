@@ -1,6 +1,8 @@
 import Texty from 'rc-texty'
 import 'rc-texty/assets/index.css'
 import TweenOne from 'rc-tween-one'
+import axios from 'axios'
+import { useCallback, useEffect, useState } from 'react'
 
 const TextAnimation = () => {
 	const getEnter = (e: any) => {
@@ -26,11 +28,38 @@ const TextAnimation = () => {
 			case 4:
 			case 5:
 			case 6:
-				return 150 + 450 + (e.index - 2) * 10
+				return 150 + 450 + (e.index - 2) * 150
 			default:
 				return 150 + 450 + (e.index - 6) * 150
 		}
 	}
+	const [hitokotoForm, setHitokotoForm] = useState({
+		id: 7719,
+		uuid: 'a153a1dc-88f4-4d27-866b-7f0895169599',
+		hitokoto: '',
+		type: 'c',
+		from: '',
+		from_who: '',
+		creator: '焚天炼日',
+		creator_uid: 11206,
+		reviewer: 4756,
+		commit_from: 'web',
+		created_at: '1641538420',
+		length: 14
+	})
+
+	const getHitokoto = useCallback(async () => {
+		const res = await axios.get('https://www.darling0.cn/hitokoto/?max_length=15')
+		setHitokotoForm(res.data)
+	}, [hitokotoForm])
+
+	const handleViewHitokoto = () => {
+		window.open(`https://hitokoto.cn/?uuid=${hitokotoForm.uuid}`)
+	}
+
+	useEffect(() => {
+		getHitokoto()
+	}, [])
 
 	const getSplit = (e: any) => {
 		const t = e.split(' ')
@@ -45,7 +74,10 @@ const TextAnimation = () => {
 	}
 
 	return (
-		<div className='text-animation-container absolute w-full bottom-1/4 text-center tracking-wide'>
+		<div
+			className='text-animation-container absolute w-full bottom-1/4 text-center tracking-wide cursor-pointer text-white'
+			onClick={handleViewHitokoto}
+		>
 			<Texty
 				className='text-6xl'
 				type='mask-top'
@@ -73,10 +105,10 @@ const TextAnimation = () => {
 					]
 				}}
 			>
-				「存在与时间」
+				{hitokotoForm.hitokoto.replace('。', '')}
 			</Texty>
 			<Texty className='mt-4' type='bottom' split={getSplit} delay={2200} interval={30}>
-				虽然人生在世有种种不如意，但你仍可以在幸福与不幸中做选择。
+				{hitokotoForm.from && '「' + hitokotoForm.from + '」'}
 			</Texty>
 		</div>
 	)
