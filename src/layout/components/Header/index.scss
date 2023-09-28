@@ -1,0 +1,14 @@
+.lay-header {
+	height: 60px;
+	padding: 0 120px;
+	font-size: 24px;
+
+	@media screen and (width <= 1200px) {
+		display: none !important;
+	}
+	.lay-header__center {
+		.lbh-tabs {
+			width: 444px;
+		}
+	}
+}

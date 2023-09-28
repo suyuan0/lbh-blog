@@ -39,5 +39,5 @@ module.exports = {
       "ignoreAtRules": ["tailwind"]
     }]
   },
-  ignoreFiles: ["**/*.js", "**/*.jsx", "**/*.tsx", "**/*.ts", "./src/styles/tailwind.scss", './dist']
+  ignoreFiles: ["**/*.js", "**/*.jsx", "**/*.tsx", "**/*.ts", "./src/*.scss" ,"./src/styles/tailwind.scss", './dist']
 };
